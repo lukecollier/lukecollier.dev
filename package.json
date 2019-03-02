@@ -1,0 +1,15 @@
+{
+ "name": "lukecollier.dev",
+ "version": "1.0.0",
+ "description": "personal website",
+ "repository": "git@github.com:lukecollier/lukecollier.dev.git",
+ "author": "leccollier@gmail.com",
+ "license": "MIT",
+ "private": true,
+ "scripts": {
+  "build": "mkdir -p test"
+ },
+ "dependencies": {
+  "gulp-atomizer": "^3.0.7"
+ }
+}
