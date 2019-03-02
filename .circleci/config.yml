@@ -1,0 +1,77 @@
+version: 2
+jobs:
+  build-html:
+    working_directory: ~/lukecollier.dev
+    docker:
+      - image: collierl/zola-alpine:0.10.1
+    steps:
+      - checkout
+      - run:
+          name: Build html
+          command: 'zola build'
+      - persist_to_workspace:
+          root: ~/lukecollier.dev
+          paths:
+            - public
+      - store_artifacts:
+          path: ./public
+          destination: html
+  build-style:
+    working_directory: ~/lukecollier.dev
+    docker:
+      - image: circleci/node:11.4.0
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Run build:cd 
+          command: npm run build:cd
+      - persist_to_workspace:
+          root: ~/lukecollier.dev
+          paths:
+            - public
+      - store_artifacts:
+          path: ./public
+          destination: css
+  deploy:
+    working_directory: ~/
+    docker:
+      - image: alpine/git
+    steps:
+      - attach_workspace:
+          at: ~/lukecollier.dev
+      - run:
+          name: Publishes to GitHub Pages
+          command: | 
+                git clone https://lukecollier:${GITHUB_TOKEN}@github.com/lukecollier/lukecollier.github.io.git public
+                rm -rf ~/public/*
+                cp -r ~/lukecollier.dev/public/. ~/public
+                echo "lukecollier.dev" > ~/public/CNAME
+                git config --global user.email "leccollier@gmail.com"
+                git config --global user.name "lukecollier"
+                cd ~/public && git add . && git commit --allow-empty -m "Build #${CIRCLE_BUILD_NUM}" && git push -f origin master
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build-html
+      - build-style
+      - deploy:
+          requires:
+            - build-html
+            - build-style
+          filters:
+            branches:
+              only: master
