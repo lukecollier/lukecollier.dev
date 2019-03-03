@@ -4,21 +4,23 @@
     <meta charset="utf-8"/>
     <title>{% block title %}{{ config.extra.title }}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="atomic.css">
   </head>
   <body>
-    <header>
-      {% block header %}
-      <h1> {{ section.extra.heading }} </h1>
-      <h2> {{ section.extra.subheading }} </h2>
-      <span> {{ section.extra.description }} </span>
-      {% endblock header %}
+    <header class="D(f) Jc(c)">
+			<div class="Ta(c)">
+				{% block header %}
+				<h1> {{ section.extra.heading }} </h1>
+				<h2> {{ section.extra.tagline }} </h2>
+				{% endblock header %}
+			</div>
     </header>
-    <nav>
-      <ul>
-        <li>blog</li>
+    <nav class="Ta(c)">
+      <ul class="D(i) List(n) P(0)">
+        <li><a href="/blog">blog</a></li>
       </ul>
     </nav>
-    <section>
+    <section class="W(100%) W(70%)--md M(a) Ta(c) Ta(s)--md">
       {% block content %}
       {{ section.content | safe }}
       {% endblock content %}

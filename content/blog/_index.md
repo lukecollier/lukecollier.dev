@@ -1,5 +1,5 @@
 +++
-title = "lukecollier.dev"
+title = "blog"
 
 description = "Homepage"
 
@@ -11,7 +11,7 @@ sort_by = "none"
 weight = 0
 
 # Template to use to render this section page
-template = "index.html"
+template = "section.html"
 
 # How many pages to be displayed per paginated page.
 # No pagination will happen if this isn't set or if the value is 0
@@ -46,4 +46,6 @@ heading = "Luke Collier"
 tagline = "Software Engineer"
 +++
 
-I'm a Software Engineer based in Manchester working for BookinGo, Booking.com's travel wing. I'm passionate about performance and correctness. I've worked on the web application for the company for over a year leading performance ehancements and pushing new and innotive tech.
+# Blog
+
+Blog archieve

@@ -7,9 +7,13 @@
  "license": "MIT",
  "private": true,
  "scripts": {
-  "build": "mkdir -p test"
+  "build": "gulp acss",
+  "watch": "gulp watch",
+  "minify": "gulp minify"
  },
  "dependencies": {
-  "gulp-atomizer": "^3.0.7"
+  "gulp": "^4.0.0",
+  "gulp-atomizer": "^3.0.7",
+  "gulp-clean-css": "^4.0.0"
  }
 }
