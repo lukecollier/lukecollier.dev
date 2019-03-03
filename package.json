@@ -8,7 +8,8 @@
  "private": true,
  "scripts": {
   "build": "gulp acss",
-  "watch": "gulp watch",
+  "watch": "gulp watch & zola serve",
+  "sync": "gsutil rsync -d -r public gs://www.lukecollier.dev",
   "minify": "gulp minify"
  },
  "dependencies": {

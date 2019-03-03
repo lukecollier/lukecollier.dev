@@ -4,7 +4,5 @@
 
 {% block content %}
 {% set blog = get_section(path="blog/_index.md") %}
-<section class="W(100%) W(70%)--md M(a) Ta(c) Ta(s)--md">
-  {{ section.content | safe }}
-</section>
+{{ section.content | safe }}
 {% endblock content %}

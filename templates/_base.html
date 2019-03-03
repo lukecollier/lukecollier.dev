@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ config.extra.name }}">
@@ -15,17 +16,17 @@
   </head>
   <body class="Ff(fonts)">
     {% block header %}
-    <header class="D(f) Bgc(primary) C(white) Jc(c)">
-      <div class="Ta(c)">
+    <header class="D(f) Fld(c) Jc(c)">
+      <div class="Ta(c) C(white) Bgc(primary)">
         <h1> {{ config.extra.name }} </h1>
         <h2> {{ config.extra.job }} </h2>
-        <nav class="Ta(c)">
-          <ul class="D(i) List(n) P(0)">
-            <li><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
-            <li><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
-          </ul>
-        </nav>
       </div>
+      <nav class="Ta(c)">
+        <ul class="D(i) List(n) P(0)">
+          <li><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
+          <li><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
+        </ul>
+      </nav>
     </header>
     {% endblock header %}
     {% block navigation %}
@@ -40,8 +41,10 @@
       </ul>
     </nav>
     {% endblock navigation %}
+    <section class="W(90%) W(60%)--md M(a) Ta(c) Ta(s)--md">
     {% block content %}
     {% endblock content %}
+    </section>
     {% block footer %}
     <footer>
     </footer>

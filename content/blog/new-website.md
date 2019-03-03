@@ -25,7 +25,7 @@ After many months faffing around with react, reasonml, elm and various other tec
 
 Hello [Zola!](https://www.getzola.org/)
 
-Zola is perfect for my needs paired with my new favourite CSS toy; [atomizer](https://acss.io/) I've got all I need to spec out and build a rhobust full featured blog to share my thoughts in an dense space.
+Zola is perfect for my needs paired with my new favourite CSS toy; [atomizer](https://acss.io/) I've got all I need to spec out and build a robust full featured blog to share my thoughts in an dense space.
 
 Not just a blog I can create a beautiful page for my cv aswell!
 
@@ -34,4 +34,5 @@ Over the next year I'll be writing blog posts and slowly updating my website.
 # Why
 A place to vent, and write down my thoughts about the world of tech. As well as talk about upcoming, current and completed projects.
 
-# Why
+# Technology
+I've thoroughly enjoyed my experience making this website
