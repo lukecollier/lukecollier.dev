@@ -6,6 +6,7 @@ My personal website
 - [ ] Put into CI
 - [ ] Write quickstart
 - [ ] Make theme
+- [ ] Use svelte for some dynamic components
 
 ## Tech Used
 - [atomic css](https://acss.io/)
