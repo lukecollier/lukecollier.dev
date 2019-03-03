@@ -14,6 +14,9 @@ template = "page.html"
 # name configured in `config.toml` and the values an array of String like
 # tags = ["rust", "web"]
 [taxonomies]
+tags = ["rust", "web", "acss", "css", "zola"]
+categories = ["web"]
+authors = ["Luke Collier"]
 
 # Your own data
 [extra]
@@ -25,7 +28,7 @@ After many months faffing around with react, reasonml, elm and various other tec
 
 Hello [Zola!](https://www.getzola.org/)
 
-Zola is perfect for my needs paired with my new favourite CSS toy; [atomizer](https://acss.io/) I've got all I need to spec out and build a robust full featured blog to share my thoughts in an dense space.
+Zola is perfect for my needs paired with my new favourite CSS toy; [atomizer](https://acss.io/) I've got all I need to spec out and build a robust full featured blog to share my thoughts and _insights_.
 
 Not just a blog I can create a beautiful page for my cv aswell!
 

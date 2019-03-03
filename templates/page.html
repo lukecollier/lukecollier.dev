@@ -2,5 +2,14 @@
 {% block title %}_{{page.title | slugify}}{% endblock title %}
 
 {% block content %}
+<p>
+Reading time is 
+  {% if page.reading_time < 1 %}
+    less then a minute
+  {% else %}
+    {{ page.reading_time }} minutes
+  {% endif %}
+</p>
+
   {{ page.content | safe }}
 {% endblock content %}
