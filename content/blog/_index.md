@@ -42,10 +42,6 @@ transparent = false
 
 # Your own data
 [extra]
-heading = "Luke Collier"
-tagline = "Software Engineer"
 +++
 
 # Blog
-
-Blog archieve

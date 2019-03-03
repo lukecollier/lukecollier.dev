@@ -1,0 +1,11 @@
+{% extends "_base.html" %}
+{% block title %}_{{section.title | slugify}}{% endblock title %}
+
+{% block content %}
+<section class="W(100%) W(70%)--md M(a) Ta(c) Ta(s)--md">
+  {{ section.content | safe }}
+  {% for page in section.pages %}
+  <a href="{{ page.path }}">{{ page.date ~ " / " ~ page.title }}</a>
+  {% endfor %}
+</section>
+{% endblock content %}

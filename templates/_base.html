@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ config.extra.name }}">
+    <meta name="keywords" content="tags">
+    <meta name="description" content="">
+    <title>{{ config.extra.title }}{% block title %}{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    <link href="/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/atomic.css" rel="stylesheet" type="text/css">
+    {% block css %}{% endblock css %}
+    {% block js %}{% endblock js %}
+  </head>
+  <body class="Ff(fonts)">
+    {% block header %}
+    <header class="D(f) Bgc(primary) C(white) Jc(c)">
+      <div class="Ta(c)">
+        <h1> {{ config.extra.name }} </h1>
+        <h2> {{ config.extra.job }} </h2>
+        <nav class="Ta(c)">
+          <ul class="D(i) List(n) P(0)">
+            <li><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
+            <li><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    {% endblock header %}
+    {% block navigation %}
+    <nav class="Ta(c)">
+      <ul class="D(i) List(n) P(0)">
+        <li class="D(ib)">
+          <a class="Td(n) C(action):a C(action)" href="/">about</a>
+        </li>
+        <li class="D(ib)">
+          <a class="Td(n) C(action):a C(action)" href="/blog">blog</a>
+        </li>
+      </ul>
+    </nav>
+    {% endblock navigation %}
+    {% block content %}
+    {% endblock content %}
+    {% block footer %}
+    <footer>
+    </footer>
+    {% endblock footer %}
+  </body>
+</html>

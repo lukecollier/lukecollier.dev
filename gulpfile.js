@@ -4,7 +4,12 @@ var cleanCSS = require('gulp-clean-css');
 
 acssConfig = {
 	'custom': {
-		'primary': '#000'
+		'black': '#000',
+		'white': '#FFF',
+		'primary': 'coral',
+		'highlight': 'yellow',
+		'action': 'blue',
+		'fonts': 'Ubuntu, Helvetica, Arial, sans-serif'
 	},
   breakPoints: {
 		'sm': '@media(min-width:500px)', 

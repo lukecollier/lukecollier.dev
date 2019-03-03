@@ -19,3 +19,5 @@ taxonomies = [
 
 [extra]
 title = "lukecollier.dev"
+name = "Luke Collier"
+job = "Software Engineer"

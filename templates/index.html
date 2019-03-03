@@ -1,32 +1,10 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>{% block title %}{{ config.extra.title }}{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="atomic.css">
-  </head>
-  <body>
-    <header class="D(f) Jc(c)">
-			<div class="Ta(c)">
-				{% block header %}
-				<h1> {{ section.extra.heading }} </h1>
-				<h2> {{ section.extra.tagline }} </h2>
-				{% endblock header %}
-			</div>
-    </header>
-    <nav class="Ta(c)">
-      <ul class="D(i) List(n) P(0)">
-        <li><a href="/blog">blog</a></li>
-      </ul>
-    </nav>
-    <section class="W(100%) W(70%)--md M(a) Ta(c) Ta(s)--md">
-      {% block content %}
-      {{ section.content | safe }}
-      {% endblock content %}
-    </section>
-    <footer>
-      {% block footer %}{% endblock footer %}
-    </footer>
-  </body>
-</html>
+{% extends "_base.html" %}
+{% block title %}{{ section.title | slugify }}{% endblock title %}
+
+
+{% block content %}
+{% set blog = get_section(path="blog/_index.md") %}
+<section class="W(100%) W(70%)--md M(a) Ta(c) Ta(s)--md">
+  {{ section.content | safe }}
+</section>
+{% endblock content %}

@@ -18,11 +18,20 @@ template = "page.html"
 # Your own data
 [extra]
 +++
+
 # Welcome!
 
-After many months faffing around with react, reasonml, elm and various other frameworks
-I decided none of that met the requirements for a static blog.
+After many months faffing around with react, reasonml, elm and various other technologies I finally found one that works well for me!
 
-# Why not React?
+Hello [Zola!](https://www.getzola.org/)
 
-Front end frameworks are in a great space for simplifying complex real time operations react and friends make the experience for applications tighter. But all this has a heavy javascript cost! Something I'm not willing to pay for the obvious choice to me is making web pages and links.
+Zola is perfect for my needs paired with my new favourite CSS toy; [atomizer](https://acss.io/) I've got all I need to spec out and build a rhobust full featured blog to share my thoughts in an dense space.
+
+Not just a blog I can create a beautiful page for my cv aswell!
+
+Over the next year I'll be writing blog posts and slowly updating my website. 
+
+# Why
+A place to vent, and write down my thoughts about the world of tech. As well as talk about upcoming, current and completed projects.
+
+# Why

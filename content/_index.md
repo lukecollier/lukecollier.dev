@@ -1,5 +1,5 @@
 +++
-title = "lukecollier.dev"
+title = "index"
 
 description = "Homepage"
 
@@ -42,8 +42,8 @@ transparent = false
 
 # Your own data
 [extra]
-heading = "Luke Collier"
-tagline = "Software Engineer"
 +++
 
-I'm a Software Engineer based in Manchester working for BookinGo, Booking.com's travel wing. I'm passionate about performance and correctness. I've worked on the web application for the company for over a year leading performance ehancements and pushing new and innotive tech.
+# About Me
+
+I'm a Software Engineer based in Manchester working for BookinGo, Booking.com's travel wing. I'm passionate about performance and correctness. I've worked on the web application for the company for over a year leading performance ehancements and pushing new and innotive tech such as rendering using svelte, using the cdn.
