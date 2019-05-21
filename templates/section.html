@@ -1,9 +1,20 @@
 {% extends "_base.html" %}
+{% block meta %}
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ section.permalink }}"/>
+<meta property="og:title" content="{{ section.title }}"/>
+<meta property="og:description" content="{{ section.description }}"/>
+<meta property="og:image" content=""/>
+<meta property="og:locale" content="en_GB"/>
+{% endblock meta %}
+
 {% block title %}_{{section.title | slugify}}{% endblock title %}
 
 {% block content %}
   {{ section.content | safe }}
-  {% for page in section.pages %}
-  <a href="{{ page.path }}">{{ page.date ~ " / " ~ page.title }}</a>
-  {% endfor %}
+  <ul>
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink }}">{{ page.date ~ " / " ~ page.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endblock content %}

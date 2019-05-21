@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://lukecollier.dev"
+base_url = "https://www.lukecollier.dev"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -8,7 +8,6 @@ compile_sass = true
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
 taxonomies = [
@@ -19,5 +18,6 @@ taxonomies = [
 
 [extra]
 title = "lukecollier.dev"
+host = "https://www.lukecollier.dev"
 name = "Luke Collier"
 job = "Software Engineer"

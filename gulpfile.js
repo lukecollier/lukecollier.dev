@@ -8,7 +8,8 @@ acssConfig = {
 		'white': '#FFF',
 		'primary': 'coral',
 		'highlight': 'yellow',
-		'action': 'blue',
+		'action': 'coral',
+		'background': '#2b303b',
 		'fonts': 'Ubuntu, Helvetica, Arial, sans-serif'
 	},
   breakPoints: {

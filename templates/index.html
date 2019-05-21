@@ -5,4 +5,13 @@
 {% block content %}
 {% set blog = get_section(path="blog/_index.md") %}
 {{ section.content | safe }}
+<h2>Blog</h2>
+<ul>
+{% for page in blog.pages | sort(attribute="date") | reverse %}
+<li>
+  <a href="{{ page.permalink }}">{{ page.date ~ " / " ~ page.title }}</a>
+  <p>{{ page.summary | safe }}</p>
+</li>
+{% endfor %}
+</ul>
 {% endblock content %}
