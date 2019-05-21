@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% block meta %}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ config.base_url }}"/>
+    <meta property="og:title" content="{{ config.extra.title }}"/>
+    <meta property="og:description" content="A blog for the angry"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:locale" content="en_GB"/>
+    {% endblock meta %}
     <base href="/">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +19,11 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
     <link href="/normalize.css" rel="stylesheet" type="text/css">
     <link href="/atomic.css" rel="stylesheet" type="text/css">
+    <link href="/theme.css" rel="stylesheet" type="text/css">
     {% block css %}{% endblock css %}
     {% block js %}{% endblock js %}
   </head>
-  <body class="Ff(fonts)">
+  <body class="Ff(fonts) Bgc(background) C(white)">
     {% block header %}
     <header class="D(f) Fld(c) Jc(c)">
       <div class="Ta(c) C(white) Bgc(primary)">
@@ -24,7 +33,9 @@
       <nav class="Ta(c)">
         <ul class="D(i) List(n) P(0)">
           <li><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
+          <li><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
           <li><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
+          <li><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
         </ul>
       </nav>
     </header>
@@ -33,10 +44,11 @@
     <nav class="Ta(c)">
       <ul class="D(i) List(n) P(0)">
         <li class="D(ib)">
-          <a class="Td(n) C(action):a C(action)" href="/">about</a>
+          <a class="Td(n) C(action):a C(action)" href="{{ config.base_url }}">about</a>
         </li>
         <li class="D(ib)">
-          <a class="Td(n) C(action):a C(action)" href="/blog">blog</a>
+          {% set blog = get_section(path="blog/_index.md", metadata_only=true) %}
+          <a class="Td(n) C(action):a C(action)" href="{{ blog.permalink }}">blog</a>
         </li>
       </ul>
     </nav>

@@ -7,9 +7,9 @@
  "license": "MIT",
  "private": true,
  "scripts": {
-  "build": "gulp acss",
+  "build": "gulp acss && zola build",
   "watch": "gulp watch & zola serve",
-  "sync": "gsutil rsync -r public gs://www.lukecollier.dev",
+  "sync": "gsutil -m rsync -r public gs://www.lukecollier.dev",
   "minify": "gulp minify"
  },
  "dependencies": {

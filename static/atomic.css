@@ -1,1 +1,59 @@
-.Bgc\(primary\){background-color:coral}.C\(white\){color:#fff}.C\(action\){color:#00f}.C\(action\)\:a:active{color:#00f}.D\(f\){display:flex}.D\(i\){display:inline}.D\(ib\){display:inline-block}.Fld\(c\){flex-direction:column}.Jc\(c\){justify-content:center}.Ff\(fonts\){font-family:Ubuntu,Helvetica,Arial,sans-serif}.List\(n\){list-style-type:none}.M\(a\){margin:auto}.P\(0\){padding:0}.Ta\(c\){text-align:center}.Ta\(s\){text-align:start}.Td\(n\){text-decoration:none}.W\(90\%\){width:90%}@media(min-width:900px){.Ta\(s\)--md{text-align:start}.W\(60\%\)--md{width:60%}}
+.Bgc\(background\) {
+  background-color: #2b303b;
+}
+.Bgc\(primary\) {
+  background-color: coral;
+}
+.C\(action\) {
+  color: coral;
+}
+.C\(white\) {
+  color: white;
+}
+.C\(action\)\:a:active {
+  color: coral;
+}
+.D\(f\) {
+  display: flex;
+}
+.D\(i\) {
+  display: inline;
+}
+.D\(ib\) {
+  display: inline-block;
+}
+.Fld\(c\) {
+  flex-direction: column;
+}
+.Jc\(c\) {
+  justify-content: center;
+}
+.Ff\(fonts\) {
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
+}
+.List\(n\) {
+  list-style-type: none;
+}
+.M\(a\) {
+  margin: auto;
+}
+.P\(0\) {
+  padding: 0;
+}
+.Ta\(c\) {
+  text-align: center;
+}
+.Ta\(s\) {
+  text-align: start;
+}
+.Td\(n\) {
+  text-decoration: none;
+}
+.W\(90\%\) {
+  width: 90%;
+}
+@media(min-width:900px) {
+  .W\(60\%\)--md {
+    width: 60%;
+  }
+}
