@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/lukecollier.dev
     docker:
-      - image: circleci/node:4.8.2-jessie
+      - image: circleci/node:9.9.0-stretch
     steps:
       - checkout
       - run:
