@@ -19,7 +19,7 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Run build 
+          name: Run build:cd 
           command: npm run build
   deploy:
     working_directory: ~/lukecollier.dev
