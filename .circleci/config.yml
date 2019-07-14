@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build-html:
     working_directory: ~/lukecollier.dev
     docker:
       - image: j1mc/docker-zola:0.8.0
@@ -11,10 +11,11 @@ jobs:
           command: 'sudo zola build'
       - store_artifacts:
           path: ./public
+  build:
+    working_directory: ~/lukecollier.dev
     docker:
       - image: circleci/node:11.4.0
     steps:
-      - checkout
       - run:
           name: Update npm
           command: 'sudo npm install -g npm@latest'
