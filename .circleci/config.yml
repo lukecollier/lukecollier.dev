@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  html:
     working_directory: ~/lukecollier.dev
     docker:
       - image: j1mc/docker-zola:0.8.0
