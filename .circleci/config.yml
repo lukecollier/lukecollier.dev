@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build-html:
+  build:
     working_directory: ~/lukecollier.dev
     docker:
       - image: j1mc/docker-zola:0.8.0
@@ -11,9 +11,6 @@ jobs:
           command: 'sudo zola build'
       - store_artifacts:
           path: ./public
-          destination: artifact-file
-  build:
-    working_directory: ~/lukecollier.dev
     docker:
       - image: circleci/node:11.4.0
     steps:
@@ -35,7 +32,6 @@ jobs:
           command: npm run build:cd
       - store_artifacts:
           path: ./public
-          destination: artifact-file
   deploy:
     working_directory: ~/lukecollier.dev
     docker:
