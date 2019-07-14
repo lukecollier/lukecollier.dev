@@ -8,7 +8,6 @@
  "private": true,
  "scripts": {
   "build": "gulp acss && zola build && gulp minify",
-  "build:cd": "gulp acss && gulp minify",
   "watch": "gulp watch & zola serve",
   "sync": "gsutil -m rsync -r public gs://www.lukecollier.dev",
   "minify": "gulp minify"

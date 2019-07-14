@@ -1,6 +1,18 @@
 version: 2
 jobs:
-  build:
+  build-html:
+    working_directory: ~/lukecollier.dev
+    docker:
+      - image: j1mc/docker-zola:0.8.0
+    steps:
+      - checkout
+      - run:
+          name: Build html
+          command: 'sudo zola build'
+      - store_artifacts:
+          path: ./public
+          destination: artifact-file
+  build-styles:
     working_directory: ~/lukecollier.dev
     docker:
       - image: circleci/node:11.4.0
@@ -20,7 +32,10 @@ jobs:
             - node_modules
       - run:
           name: Run build:cd 
-          command: npm run build
+          command: npm run build:cd
+      - store_artifacts:
+          path: ./public
+          destination: artifact-file
   deploy:
     working_directory: ~/lukecollier.dev
     docker:
@@ -30,9 +45,9 @@ jobs:
       - run:
           name: Sync to google
           command: | 
-                echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
-                gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-                gsutil -m rsync -r public gs://www.lukecollier.dev
+                # echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+                # gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+                # gsutil -m rsync -r public gs://www.lukecollier.dev
 
 workflows:
   version: 2
