@@ -12,7 +12,7 @@ jobs:
       - store_artifacts:
           path: ./public
           destination: artifact-file
-  build-styles:
+  build:
     working_directory: ~/lukecollier.dev
     docker:
       - image: circleci/node:11.4.0
