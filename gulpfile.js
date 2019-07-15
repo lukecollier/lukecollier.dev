@@ -31,7 +31,7 @@ function atomicCss() {
 function minifyCss() {
 	return gulp.src('./static/*.css')
 		.pipe(cleanCSS({compatibility: 'ie8'}))
-		.pipe(gulp.dest('static'));
+		.pipe(gulp.dest('public'));
 }
 
 function watch() {
