@@ -44,7 +44,7 @@ jobs:
       - run:
           name: Sync to google
           command: | 
-                echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+                echo $GCLOUD_SERVICE_KEY | gcloud auth LECCollier@gmail.com --key-file=-
                 gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
                 gsutil -m rsync -r public gs://www.lukecollier.dev
 
