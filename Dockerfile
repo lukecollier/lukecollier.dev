@@ -10,4 +10,4 @@ RUN apk update && \
     apk upgrade && \
     apk add zola
 
-RUN zola build
+CMD ["/bin/sh"]
