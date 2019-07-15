@@ -8,6 +8,6 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 
 RUN apk update && \
     apk upgrade && \
-    apk add zola
+    apk add zola ca-certificates
 
 CMD ["/bin/sh"]
