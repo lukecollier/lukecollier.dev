@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Build html
-          command: 'sudo zola build'
+          command: 'build'
       - store_artifacts:
           path: ./public
   build:
