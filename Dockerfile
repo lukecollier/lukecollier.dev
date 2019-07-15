@@ -1,4 +1,11 @@
-FROM node:10.4.0-alpine
+FROM alpine:latest
 
-RUN apk update
-RUN apk add http://dl-cdn.alpinelinux.org/alpine/edge/testing zola
+LABEL com.circleci.preserve-entrypoint=true
+
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
+
+RUN apk update && \
+    apk upgrade && \
+    apk add zola
+
+ENTRYPOINT ["zola"]
