@@ -50,7 +50,7 @@ jobs:
       - image: google/cloud-sdk
     steps:
       - attach_workspace:
-          at: ~/lukecollier.dev
+          at: ~/lukecollier.dev/public
       - run:
           name: Sync to google
           command: | 
