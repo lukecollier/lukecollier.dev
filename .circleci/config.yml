@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Build html
           command: 'zola build'
-			- persist_to_workspace:
+      - persist_to_workspace:
           root: /tmp
           paths:
             - public
