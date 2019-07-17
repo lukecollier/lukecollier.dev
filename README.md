@@ -1,9 +1,10 @@
+[![CircleCI](https://circleci.com/gh/lukecollier/lukecollier.dev.svg?style=svg)](https://circleci.com/gh/lukecollier/lukecollier.dev)
 # lukecollier.dev
 My personal website
 
 ## Todo
 - [ ] Dockerize
-- [ ] Put into CI
+- [/] Put into CI
 - [ ] Write quickstart
 - [ ] Make theme
 - [ ] Use svelte for some dynamic components
