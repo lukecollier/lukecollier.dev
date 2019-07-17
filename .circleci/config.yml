@@ -49,6 +49,8 @@ jobs:
     docker:
       - image: google/cloud-sdk
     steps:
+      - attach_workspace:
+          at: ~/lukecollier.dev
       - run:
           name: Sync to google
           command: | 
