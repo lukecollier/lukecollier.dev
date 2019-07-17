@@ -10,7 +10,7 @@ jobs:
           name: Build html
           command: 'zola build'
       - persist_to_workspace:
-          root: /tmp
+          root: ~/lukecollier.dev
           paths:
             - public
       - store_artifacts:
@@ -38,7 +38,7 @@ jobs:
           name: Run build:cd 
           command: npm run build:cd
       - persist_to_workspace:
-          root: /tmp
+          root: ~/lukecollier.dev
           paths:
             - public
       - store_artifacts:
