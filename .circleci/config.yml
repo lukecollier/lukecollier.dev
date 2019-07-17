@@ -50,11 +50,10 @@ jobs:
       - image: google/cloud-sdk
     steps:
       - attach_workspace:
-          at: ~/lukecollier.dev/public
+          at: ~/lukecollier.dev
       - run:
           name: Sync to google
           command: | 
-                ls
                 echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
                 gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
                 gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
