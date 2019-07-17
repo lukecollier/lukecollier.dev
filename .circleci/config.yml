@@ -52,10 +52,11 @@ jobs:
       - run:
           name: Sync to google
           command: | 
+                ls
                 echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
                 gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
                 gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-                gsutil -m rsync -r /tmp/public gs://www.lukecollier.dev
+                gsutil -m rsync -r public gs://www.lukecollier.dev
 
 workflows:
   version: 2
