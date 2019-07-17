@@ -25,7 +25,7 @@ function atomicCss() {
 				output: 'atomic.css', 
 				acssConfig: acssConfig
 			}))
-      .pipe(gulp.dest('static'));
+      .pipe(gulp.dest('public'));
 };
 
 function minifyCss() {
