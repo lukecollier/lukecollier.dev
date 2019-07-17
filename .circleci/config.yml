@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Run build:cd 
           command: npm run build:cd
-			- persist_to_workspace:
+      - persist_to_workspace:
           root: /tmp
           paths:
             - public
