@@ -46,4 +46,4 @@ transparent = false
 
 # About Me
 
-I'm a Software Engineer based in Manchester working for BookinGo, Booking.com's travel wing. I'm passionate about performance and correctness. I've worked on the web application for the company for over a year leading performance ehancements and pushing new and innotive tech such as rendering using svelte, using the cdn.
+I'm a Software Engineer based in Manchester working for BookingGo, Booking.com's travel wing. I'm passionate about performance and correctness. I've worked on the web application for the company for over a year leading performance enhancements and pushing new and innovative tech such as rendering using svelte, and pushing for more use of the cdn.
