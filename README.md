@@ -4,7 +4,7 @@ My personal website
 
 ## Todo
 - [ ] Dockerize
-- [/] Put into CI
+- [x] Put into CI
 - [ ] Write quickstart
 - [ ] Make theme
 - [ ] Use svelte for some dynamic components
