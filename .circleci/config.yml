@@ -60,7 +60,7 @@ jobs:
                 echo "lukecollier.dev" > ~/public/CNAME
                 git config --global user.email "leccollier@gmail.com"
                 git config --global user.name "lukecollier"
-                cd ~/public && git add . && git commit -m "todo: need a version number" && git push -f origin master
+                cd ~/public && git add . && git commit --allow-empty -m "Build #${CIRCLE_BUILD_NUM}" && git push -f origin master
 
 workflows:
   version: 2
