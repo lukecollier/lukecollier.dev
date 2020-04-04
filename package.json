@@ -10,12 +10,11 @@
   "build": "gulp acss && zola build && gulp minify",
   "build:cd": "gulp acss && gulp minify",
   "watch": "gulp watch & zola serve",
-  "sync": "gsutil -m rsync -r public gs://www.lukecollier.dev",
   "minify": "gulp minify"
  },
  "dependencies": {
-  "gulp": "^4.0.0",
-  "gulp-atomizer": "^3.0.7",
-  "gulp-clean-css": "^4.0.0"
+  "gulp": "4.0.2",
+  "gulp-atomizer": "3.0.7",
+  "gulp-clean-css": "4.3.0"
  }
 }
