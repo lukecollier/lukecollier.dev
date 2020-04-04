@@ -47,17 +47,18 @@ jobs:
   deploy:
     working_directory: ~/lukecollier.dev
     docker:
-      - image: google/cloud-sdk
+      - image: alpine/git
     steps:
       - attach_workspace:
           at: ~/lukecollier.dev
       - run:
           name: Sync to google
           command: | 
-                echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
-                gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
-                gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
                 gsutil -m rsync -r public gs://www.lukecollier.dev
+                git clone https://lukecollier:${GITHUB_TOKEN}@github.com/lukecollier/lukecollier.github.io.git public
+                rm -rf ~/public/*
+                cp -r ~/lukecollier.dev/public/. ~/public
+                cd ~/public && git a . && git commit -m "todo: need a version number" && git push -f origin master
 
 workflows:
   version: 2
