@@ -45,16 +45,16 @@ jobs:
           path: ./public
           destination: css
   deploy:
-    working_directory: ~/lukecollier.dev
+    working_directory: ~/
     docker:
       - image: alpine/git
     steps:
       - attach_workspace:
           at: ~/lukecollier.dev
       - run:
-          name: Sync to google
+          name: Publishes to GitHub Pages
           command: | 
-                gsutil -m rsync -r public gs://www.lukecollier.dev
+                echo $(ls)
                 git clone https://lukecollier:${GITHUB_TOKEN}@github.com/lukecollier/lukecollier.github.io.git public
                 rm -rf ~/public/*
                 cp -r ~/lukecollier.dev/public/. ~/public
