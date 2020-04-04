@@ -54,11 +54,11 @@ jobs:
       - run:
           name: Publishes to GitHub Pages
           command: | 
-                echo $(ls)
                 git clone https://lukecollier:${GITHUB_TOKEN}@github.com/lukecollier/lukecollier.github.io.git public
                 rm -rf ~/public/*
                 cp -r ~/lukecollier.dev/public/. ~/public
-                cd ~/public && git a . && git commit -m "todo: need a version number" && git push -f origin master
+                echo "www.lukecollier.dev" > ~/public/CNAME
+                cd ~/public && git add . && git commit -m "todo: need a version number" && git push -f origin master
 
 workflows:
   version: 2
