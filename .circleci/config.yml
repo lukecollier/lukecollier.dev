@@ -16,7 +16,7 @@ jobs:
       - store_artifacts:
           path: ./public
           destination: html
-  build:
+  build-style:
     working_directory: ~/lukecollier.dev
     docker:
       - image: circleci/node:11.4.0
@@ -67,11 +67,11 @@ workflows:
   build_and_deploy:
     jobs:
       - build-html
-      - build
+      - build-style
       - deploy:
           requires:
             - build-html
-            - build
+            - build-style
           filters:
             branches:
               only: master

@@ -19,29 +19,28 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
     <link href="/normalize.css" rel="stylesheet" type="text/css">
     <link href="/atomic.css" rel="stylesheet" type="text/css">
-    <link href="/theme.css" rel="stylesheet" type="text/css">
     {% block css %}{% endblock css %}
     {% block js %}{% endblock js %}
   </head>
-  <body class="Ff(fonts) Bgc(background) C(white)">
+  <body class="H(100%) Ff(fonts) Bgc(background) C(white)">
       {% block header %}
-      <nav class="Ta(c)">
-          <ul class="D(i) List(n) P(0)">
-              <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
-              <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
-              <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
-              <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
-          </ul>
-      </nav>
-      <header class="D(f) Fld(c) Jc(c)">
+      <header class="Jc(c)">
           <div class="Ta(c) C(white) Bgc(primary)">
               <h1> {{ config.extra.name }} </h1>
               <h2> {{ config.extra.job }} </h2>
           </div>
       </header>
       {% endblock header %}
-      <div class="W(90%) W(60%)--md M(a) Ta(s)">
+      <div class="D(f) Fxf(c) H(100%) M(a) Ta(s)">
           {% block navigation %}
+          <nav class="Ta(c)">
+              <ul class="D(i) List(n) P(0)">
+                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
+                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
+                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
+                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
+              </ul>
+          </nav>
           <nav class="Ta(c)">
               <ul class="D(i) List(n) P(0)">
                   <li class="D(ib)">
@@ -54,12 +53,12 @@
               </ul>
           </nav>
           {% endblock navigation %}
-          <section>
+          <section class="Fxg(1) Fxs(1) Fx(a)">
               {% block content %}
               {% endblock content %}
           </section>
           {% block footer %}
-          <footer>
+          <footer class="Fxg(0) Fxs(1) Fx(a)">
               © 2020 Luke Collier.
           </footer>
           {% endblock footer %}
