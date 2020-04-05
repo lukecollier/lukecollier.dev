@@ -23,21 +23,21 @@
     {% block css %}{% endblock css %}
     {% block js %}{% endblock js %}
   </head>
-  <body class="Ff(fonts) Bgc(background) C(white)">
+  <body class="Ff(fonts) W(90%) W(60%)--md Bgc(background) C(white)">
     {% block header %}
+    <nav class="Ta(c)">
+        <ul class="D(i) List(n) P(0)">
+            <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
+            <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
+            <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
+            <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
+        </ul>
+    </nav>
     <header class="D(f) Fld(c) Jc(c)">
       <div class="Ta(c) C(white) Bgc(primary)">
-        <h1> {{ config.extra.name }} </h1>
+        <h1 Mt(0)> {{ config.extra.name }} </h1>
         <h2> {{ config.extra.job }} </h2>
       </div>
-      <nav class="Ta(c)">
-        <ul class="D(i) List(n) P(0)">
-          <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
-          <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
-          <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
-          <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
-        </ul>
-      </nav>
     </header>
     {% endblock header %}
     {% block navigation %}
@@ -53,12 +53,13 @@
       </ul>
     </nav>
     {% endblock navigation %}
-    <section class="W(90%) W(60%)--md M(a) Ta(s)">
+    <section class="M(a) Ta(s)">
       {% block content %}
       {% endblock content %}
     </section>
     {% block footer %}
     <footer>
+        © 2020 Luke Collier.
     </footer>
     {% endblock footer %}
   </body>

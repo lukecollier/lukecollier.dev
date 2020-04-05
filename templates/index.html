@@ -1,7 +1,5 @@
 {% extends "_base.html" %}
 {% block title %}{{ section.title | slugify }}{% endblock title %}
-
-
 {% block content %}
 {% set blog = get_section(path="blog/_index.md") %}
 {{ section.content | safe }}
