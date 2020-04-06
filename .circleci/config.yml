@@ -3,12 +3,12 @@ jobs:
   build-html:
     working_directory: ~/lukecollier.dev
     docker:
-      - image: collierl/zola:0.10.1
+      - image: collierl/zola-alpine:0.10.1
     steps:
       - checkout
       - run:
           name: Build html
-          command: 'zola build'
+          command: 'build'
       - persist_to_workspace:
           root: ~/lukecollier.dev
           paths:
