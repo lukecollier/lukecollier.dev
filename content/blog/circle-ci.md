@@ -19,7 +19,6 @@ authors = ["Luke Collier"]
 +++
 
 After some time the website now will upload itself after every commit!
-
 <!-- more -->
 
 Quick post just to say that I've enjoyed my time with circle CI, in my day to day job I use Bamboo which provides several problems.

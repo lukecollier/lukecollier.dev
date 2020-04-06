@@ -17,7 +17,7 @@
       {% for page in section.pages | sort(attribute="date") | reverse %}
       <li>
           <a href="{{ page.permalink }}">{{ page.date ~ " / " ~ page.title }}</a>
-          <p class="H(6.5ex) Ov(h) Tov(e)">{{ page.summary | striptags | safe }}</p>
+          <p class="H(6.5ex) Ov(h) Tov(e)">{{ page.summary | safe | striptags}}</p>
       </li>
       {% endfor %}
   </ul>
