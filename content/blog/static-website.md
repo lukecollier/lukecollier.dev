@@ -19,9 +19,8 @@ authors = ["Luke Collier"]
 [extra]
 +++
 
-While creating this website from the wonderous [Zola](https://www.getzola.org), I got thinking about the applications of a static site for more then a blog. A full web application that can run entirely from a cdn with all the benefits (and problems) that would cause? Further more could we have low level atomic experimentation on the smallest of html changes?
+While creating this website from the wonderous [Zola](https://www.getzola.org), I got thinking about the applications of a static site for more then a blog. <!-- more -->A full web application that can run entirely from a cdn with all the benefits (and problems) that would cause? Further more could we have low level atomic experimentation on the smallest of html changes?
 
-<!-- more -->
 
 ```html
 <tl>

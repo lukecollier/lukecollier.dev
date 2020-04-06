@@ -3,12 +3,11 @@
 {% block content %}
 {% set blog = get_section(path="blog/_index.md") %}
 {{ section.content | safe }}
-<h2>Latest</h2>
+<h2>Latest Blog</h2>
 <ul class="P(0) List(n)">
     {% for page in blog.pages | sort(attribute="date") | reverse | slice(start=0, end=5) %}
     <li>
         <a href="{{ page.permalink }}">{{ page.date ~ " / " ~ page.title }}</a>
-        <p>{{ page.summary | safe }}</p>
     </li>
     {% endfor %}
 </ul>

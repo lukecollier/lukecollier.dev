@@ -19,9 +19,7 @@ authors = ["Luke Collier"]
 [extra]
 +++
 
-Getting a project up and running is a neccesary part of any opensource software, but more often then not we seem to not include the neccessary steps in our worklife repo's! How can we fix this? Here I will suggest some ideas for improving your teams code visibility in your organisation. 
-
-<!-- more -->
+Getting a project up and running is a neccesary part of any opensource software, but more often then not we seem to not include the neccessary steps in our worklife repo's! How can we fix this? <!-- more -->Here I will suggest some ideas for improving your teams code visibility in your organisation. 
 
 # Quickstarts
 

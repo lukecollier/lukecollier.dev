@@ -24,7 +24,6 @@ authors = ["Luke Collier"]
 
 Why, what, when and where? 
 It came to my attention my open source contributions are lacking, this website is the first step on my goal of becoming a contributer.
-
 <!-- more -->
 
 ## Welcome!
