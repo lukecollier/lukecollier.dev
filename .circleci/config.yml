@@ -3,7 +3,7 @@ jobs:
   build-html:
     working_directory: ~/lukecollier.dev
     docker:
-      - image: collierl/zola-alpine:0.0.5
+      - image: collierl/zola:0.10.1
     steps:
       - checkout
       - run:

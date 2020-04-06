@@ -45,4 +45,4 @@ transparent = false
 +++
 
 Test
-<!-- readmore -->
+<!-- more -->
