@@ -4,7 +4,7 @@ description = "Making getting up and running quick"
 
 date = 2019-03-04
 
-draft = true
+draft = false
 
 in_search_index = true
 

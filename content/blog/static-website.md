@@ -4,7 +4,7 @@ description = "Can we make websites faster then the fastest possible?"
 
 date = 2019-03-08
 
-draft = true
+draft = false
 
 in_search_index = true
 

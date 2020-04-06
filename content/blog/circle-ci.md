@@ -4,7 +4,7 @@ description = "The website will automatically sync up!"
 
 date = 2019-07-17
 
-draft = true 
+draft = false 
 
 in_search_index = true
 

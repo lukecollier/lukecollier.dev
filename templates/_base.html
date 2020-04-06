@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% block meta %}
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ config.base_url }}"/>
-    <meta property="og:title" content="{{ config.extra.title }}"/>
-    <meta property="og:description" content="A blog for the angry"/>
-    <meta property="og:image" content=""/>
-    <meta property="og:locale" content="en_GB"/>
-    {% endblock meta %}
-    <base href="/">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ config.extra.name }}">
-    <meta name="keywords" content="tags">
-    <meta name="description" content="">
-    <title>{{ config.extra.title }}{% block title %}{% endblock title %}</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
-    <link href="/normalize.css" rel="stylesheet" type="text/css">
-    <link href="/atomic.css" rel="stylesheet" type="text/css">
-    {% block css %}{% endblock css %}
-    {% block js %}{% endblock js %}
-  </head>
-  <body class="H(100%) Ff(fonts) Bgc(background) C(white)">
-      {% block header %}
-      <header class="Jc(c)">
-          <div class="Ta(c) C(white) Bgc(primary)">
-              <h1> {{ config.extra.name }} </h1>
-              <h2> {{ config.extra.job }} </h2>
-          </div>
-      </header>
-      {% endblock header %}
-      <div class="D(f) Fxf(c) H(100%) M(a) Ta(s)">
-          {% block navigation %}
-          <nav class="Ta(c)">
-              <ul class="D(i) List(n) P(0)">
-                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://twitter.com/LukeCollier4">twitter</a></li>
-                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
-                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
-                  <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
-              </ul>
-          </nav>
-          <nav class="Ta(c)">
-              <ul class="D(i) List(n) P(0)">
-                  <li class="D(ib)">
-                      <a class="Td(n) C(action):a C(action)" href="{{ config.base_url }}">about</a>
-                  </li>
-                  <li class="D(ib)">
-                      {% set blog = get_section(path="blog/_index.md", metadata_only=true) %}
-                      <a class="Td(n) C(action):a C(action)" href="{{ blog.permalink }}">blog</a>
-                  </li>
-              </ul>
-          </nav>
-          {% endblock navigation %}
-          <section class="Fxg(1) Fxs(1) Fx(a)">
-              {% block content %}
-              {% endblock content %}
-          </section>
-          {% block footer %}
-          <footer class="Fxg(0) Fxs(1) Fx(a)">
-              © 2020 Luke Collier.
-          </footer>
+    <head>
+        {% block meta %}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ config.base_url }}"/>
+        <meta property="og:title" content="{{ config.extra.title }}"/>
+        <meta property="og:description" content="A blog for the angry"/>
+        <meta property="og:image" content=""/>
+        <meta property="og:locale" content="en_GB"/>
+        {% endblock meta %}
+        <base href="/">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="{{ config.extra.name }}">
+        <meta name="keywords" content="tags">
+        <meta name="description" content="">
+        <title>{{ config.extra.title }}{% block title %}{% endblock title %}</title>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+        <link href="/normalize.css" rel="stylesheet" type="text/css">
+        <link href="/atomic.css" rel="stylesheet" type="text/css">
+        {% block css %}{% endblock css %}
+        {% block js %}{% endblock js %}
+    </head>
+    <body class="Ff(fonts) Bgc(background) C(black)">
+        <div class="Mih(100vh) Fxg(0) Fxs(1) Fx(a) D(f) Fxf(c) H(100%) M(a) Ta(s)">
+            {% block header %}
+            {% block social %}
+            <nav class="Fxg(0) Fxs(1) Fx(a) Ta(c)">
+                <ul class="D(i) List(n) P(0)">
+                    <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://twitter.com/climbingcoding1">twitter</a></li>
+                    <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier">github</a></li>
+                    <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="mailto: contact@lukecollier.dev">contact@lukecollier.dev</a></li>
+                    <li class="D(ib)"><a class="Td(n) C(action):a C(action)" href="https://github.com/lukecollier/lukecollier.dev">source</a></li>
+                </ul>
+            </nav>
+            {% endblock social %}
+            <header class="Fxg(0) Fxs(1) Fx(a) Jc(c)">
+                <div class="Ta(c) C(white) Bgc(primary)">
+                    <h1 class="M(0)"> {{ config.extra.name }} </h1>
+                    <h2 class="M(0)"> {{ config.extra.job }} </h2>
+                </div>
+            </header>
+            {% block navigation %}
+            <nav class="Fxg(0) Fxs(1) Fx(a) Ta(c)">
+                <ul class="D(i) List(n) P(0)">
+                    <li class="D(ib)">
+                        <a class="Td(n) C(action):a C(action)" href="{{ config.base_url }}">about</a>
+                    </li>
+                    <li class="D(ib)">
+                        {% set blog = get_section(path="blog/_index.md", metadata_only=true) %}
+                        <a class="Td(n) C(action):a C(action)" href="{{ blog.permalink }}">blog</a>
+                    </li>
+                </ul>
+            </nav>
+            {% endblock navigation %}
+            {% endblock header %}
+            <section class="M(a) W(100%)--sm W(50%)--md W(33%)--lg Fxg(1) Fxs(1) Fx(a)">
+                {% block content %}
+                {% endblock content %}
+            </section>
+            {% block footer %}
+            <footer class="Fxg(0) Fxs(1) Fx(a) Ta(c) C(white) Bgc(primary)">
+                © 2020 Luke Collier.
+            </footer>
           {% endblock footer %}
       </div>
   </body>

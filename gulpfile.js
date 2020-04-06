@@ -6,11 +6,11 @@ acssConfig = {
 	'custom': {
 		'black': '#000',
 		'white': '#FFF',
-		'primary': '#4f7cac',
-		'highlight': '#c0e0de',
-		'action': '#9eefe5',
-		'background': '#162521',
-    'dark-alt': '#3c474b',
+		'primary': '#89ce94',
+		'secondary': '#86a59c',
+		'highlight': '#7d5ba6',
+		'action': '#643173',
+		'background': '#FFF',
 		'fonts': 'Ubuntu, Helvetica, Arial, sans-serif'
 	},
   breakPoints: {

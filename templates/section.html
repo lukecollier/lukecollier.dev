@@ -12,9 +12,13 @@
 
 {% block content %}
   {{ section.content | safe }}
-  <ul>
-    {% for page in section.pages %}
-    <li><a href="{{ page.permalink }}">{{ page.date ~ " / " ~ page.title }}</a></li>
-    {% endfor %}
+  <h2>Latest</h2>
+  <ul class="P(0) List(n)">
+      {% for page in section.pages | sort(attribute="date") | reverse %}
+      <li>
+          <a href="{{ page.permalink }}">{{ page.date ~ " / " ~ page.title }}</a>
+          <p class="H(6.5ex) Ov(h) Tov(e)">{{ page.summary | striptags | safe }}</p>
+      </li>
+      {% endfor %}
   </ul>
 {% endblock content %}
