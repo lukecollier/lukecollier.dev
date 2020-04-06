@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Build html
-          command: 'build'
+          command: 'zola build'
       - persist_to_workspace:
           root: ~/lukecollier.dev
           paths:
