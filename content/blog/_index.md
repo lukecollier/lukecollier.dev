@@ -43,6 +43,4 @@ transparent = false
 # Your own data
 [extra]
 +++
-
-Test
 <!-- more -->
