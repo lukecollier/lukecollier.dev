@@ -1,22 +1,15 @@
-+++
-title = "Adding Continous Integration to the website"
-description = "The website will automatically sync up!"
-
-date = 2019-07-17
-
-draft = false 
-
-in_search_index = true
-
-template = "page.html"
-
-[taxonomies]
-tags = ["web", "hacking", "open source", "website", "circle ci"]
-categories = ["development"]
-authors = ["Luke Collier"]
-
-[extra]
-+++
+---
+layout: ../../../layouts/BlogPostLayout.astro
+title: Adding Continous Integration to the website
+description: "The website will automatically sync up!"
+date: 2019-07-17
+tags:
+  - web
+  - hacking
+  - open source
+  - website
+  - circle ci
+---
 
 After some time the website now will upload itself after every commit!
 <!-- more -->

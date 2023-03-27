@@ -1,22 +1,22 @@
-+++
-title = "Belte, Learnings from a Failure"
-description = "Not everything works out, and this project certainly did not"
+---
+layout: ../../../layouts/BlogPostLayout.astro
+title: "Belte, Learnings from a Failure"
+description: "Not everything works out, and this project certainly did not"
+date: 2019-05-19
+draft: false 
+tags:
+  - web 
+  - hacking
+  - open source
+  - personal project
+  - learnings
+---
 
-date = 2019-05-19
-
-draft = false 
-
-in_search_index = true
-
-template = "page.html"
-
-[taxonomies]
-tags = ["web", "hacking", "open source", "personal project", "learnings"]
-categories = ["development"]
-authors = ["Luke Collier"]
-
-[extra]
-+++
+## TL;DR;
+- Made a project
+- Finished project
+- Gave up on project
+- Had a good time
 
 As mentioned in my previous blogpost my first task was attaching complex components into and to that end I'm proud to anounce a all new shiny project! <!-- more -->[Belte](https://github.com/lukecollier/belte) with the aim of applying components onto plain old html, inspired heavily by svelte. And as of 20 days ago I've decided to no longer work on the project, in this retrospective we will dive into the "what went wrong" and the "why it was doomed from the start" of the project and where to go after.
 
@@ -36,13 +36,7 @@ These are the main three but I'm aware theres many I haven't thought about or ac
 The nail in the coffin came with the release of [svelte 3](https://github.com/sveltejs/svelte) this release removes most problems with simply building a complete svelte project. Svelte 3 does everything belte tried and more, the only down side being some javascript is always created for each project even if they are simply html. But compared with the [incredible cost](https://bundlephobia.com/result?p=react-dom@16.8.6) for first time loading a react application less than a few kB is barely worth mentioning. It became apparent that my project was supplanted by svelte and a step in the build that server side rendered it (which is what I will use in future possibily even on this blog).
 
 ## Why finish it?
-The savvy may have noticed that this was mid project that I decided I would not continue so then why did I dedicate another few weeks to finishing it? I was having a lot of fun and learning a lot. The complexity of the project required understanding javascript AST's as well as manipulating a virtualized DOM to render the correct output. This was an non trivual thing to do and exposed me to the great power of javascript. It was great to see how other languages tackle issues and manipulate quirks of web to make something new. And even though it didn't work I am glad I atleast had something working before giving in.
+The savvy may have noticed that this was mid project that I decided I would not continue so then why did I dedicate another few weeks to finishing it? I was having a lot of fun and learning a lot. The complexity of the project required understanding javascript AST's as well as manipulating a vitalized DOM to render the correct output. This was an non trivial thing to do and exposed me to the great power of javascript. It was great to see how other languages tackle issues and manipulate quirks of web to make something new. And even though it didn't work I am glad I atleast had something working before giving in.
 
 ## Learnings
 I learnt that things don't have to be used to have value for me. I enjoyed my time working with javascript (even it's build quirks) and will definitely use the skills from AST's and DOM manipulation again.
-
-## TL;DR;
-- Made a project
-- Finished project
-- Gave up on project
-- Had a good time

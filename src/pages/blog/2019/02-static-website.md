@@ -1,23 +1,18 @@
-+++
-title = "Static Websites for Great Good"
-description = "Can we make websites faster then the fastest possible?"
-
-date = 2019-03-08
-
-draft = false
-
-in_search_index = true
-
-template = "page.html"
-
-[taxonomies]
-tags = ["web", "cdn", "development", "idea", "project", "hacking", "high level"]
-categories = ["development"]
-authors = ["Luke Collier"]
-
-# Your own data
-[extra]
-+++
+---
+layout: ../../../layouts/BlogPostLayout.astro
+title: "Static Websites for Great Good"
+description: "Can we make websites faster then the fastest possible?"
+date: 2019-03-08
+draft: false
+tags:
+  - web
+  - cdn
+  - development
+  - idea
+  - project
+  - hacking
+  - high level"]
+---
 
 While creating this website from the wonderous [Zola](https://www.getzola.org), I got thinking about the applications of a static site for more then a blog. <!-- more -->A full web application that can run entirely from a cdn with all the benefits (and problems) that would cause? Further more could we have low level atomic experimentation on the smallest of html changes?
 

@@ -1,0 +1,22 @@
+---
+import { readdir } from 'fs/promises'
+
+export async function getStaticPaths() {
+  const years = (await readdir('./src/pages/blog', { withFileTypes: true }))
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name)
+
+  return years.map(year => ({params: {year}}));
+}
+
+const { year } = Astro.params;
+const posts = await Astro.glob("./**/*.md");
+const yearsPosts = posts.filter(post => !post.frontmatter.draft && post.url.includes("/" + year + "/"))
+---
+{yearsPosts.map((post) => (
+  <h1>
+    <h2>{post.frontmatter.title}</h2>
+    <a href={post.url}>Read more</a>
+  </h1>
+))}
+
