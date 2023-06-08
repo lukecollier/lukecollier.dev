@@ -44,17 +44,17 @@
   [2021 - 2022], [
   #text(weight:"bold")[OrgVue] #h(1fr) Senior Scala Engineer
 
-  While working at OrgVue I fully automated the release pipelines. By working with our operations team I implemented strategies that allowed developers to self serve their infrastructure requirements reducing blocked work streams. 
+  While working at OrgVue I fully automated the release pipelines. By working with our operations team I implemented strategies that allowed developers to self-serve their infrastructure requirements reducing blocked work streams. 
   ],
   [2019 - 2021], [
   #text(weight:"bold")[Disney Streaming Services] #h(1fr) Scala Engineer
 
-  At Disney Streaming I built an A/B testing platform with extreme requirements around performance. Focussing on these requirements,  identifying, and removing blocking operations, leading to improving our throughput by 20%.  I was also able to mentor and up-skill 2 other team members in Scala and funtional programming in under two weeks. I created and deployed internal documentation reducing integration questions by ~2 a week. 
+  At Disney Streaming I built an A/B testing platform with extreme requirements around performance. Focussing on these requirements,  identifying, and removing blocking operations, leading to improving our throughput by 20%.  I was also able to mentor and up-skill 2 other team members in Scala and functional programming in under two weeks. I created and deployed internal documentation reducing integration questions by ~2 a week. 
   ],
   [2017 - 2019], [
     #text(weight:"bold")[Booking.com] #h(1fr) Software Engineer
 
-    I impleneted A/B tested features with over one hundred concurrent experiments ran daily and thousands of users per minute. This gave me the confidence to make changes, monitor releases and respond to outages. I released, monitored, and fixed hundreds of features and had one of the highest monthly contribution in the organization across a 500+ engineering team.
+    I implemented A/B tested features with over one hundred concurrent experiments run daily and thousands of users per minute. This gave me the confidence to make changes, monitor releases and respond to outages. I released, monitored, and fixed hundreds of features and had one of the highest monthly contributions in the organization across a 500+ engineering team.
   ],
   [2014 - 2017], [
     #text(weight:"bold")[BSC First with Honours in Computer Science] #h(1fr) Bangor University
@@ -84,4 +84,5 @@
 
 References are to be given upon request
 ])
+
 
