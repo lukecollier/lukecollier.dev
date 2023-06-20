@@ -37,12 +37,12 @@ margin: (x: 0pt, y: 0pt),
     [2022 - Now], [
       #text(weight:"bold")[Skedulo] #h(1fr) Senior Scala Engineer
 
-      Picking up where my dissertation left off working with NP-hard problems and providing integrations that generated schedules for hundreds of people. I implemented the team's ways of working, improving time to delivery but also tracking it and experimenting with our team metrics. Performed large architectural migrations to reduce our out-of-date dependencies to zero. Added
+      Picking up where my dissertation left off working with NP-hard problems and providing integrations that generated schedules for hundreds of people. I implemented the team's ways of working, improving time to delivery but also lead tracking it and experimenting with our team metrics. Performed large architectural migrations to reduce our out-of-date dependencies to zero. Identified high resource usage leading to a 100% improvement.
     ],
-    [2021 - 2022], [
+    [2021 - Aug], [
       #text(weight:"bold")[OrgVue] #h(1fr) Senior Scala Engineer
 
-      By working with the operations team implemented strategies that allowed developers to self-serve their infrastructure requirements reducing blocked work streams. Fully automating the release pipelines reduces delivery time.
+      By working with the operations team implemented strategies that allowed developers to self-serve their infrastructure requirements reducing blocked work streams. Fully automating the release pipelines leading to reduced delivery time.
     ],
     [2019 - 2021], [
       #text(weight:"bold")[Disney Streaming Services] #h(1fr) Scala Engineer
@@ -57,7 +57,7 @@ margin: (x: 0pt, y: 0pt),
     [2014 - 2017], [
       #text(weight:"bold")[BSC First with Honours in Computer Science] #h(1fr) Bangor University
 
-      My dissertation was on Genetic Algorithms, with research into various machine learning algorithms. Created a project that would take a data set and provide an optimized timetable based on a fitness function.
+      My dissertation was on Genetic Algorithms with research into various heuristic and meta heuristic algorithms. Created a project that would take a data set and provide an optimized timetable based on a fitness function.
     ]
     )
 
@@ -77,7 +77,7 @@ margin: (x: 0pt, y: 0pt),
   / Migrating: from *Maven* to *Gradle*, and *Cats Effect 2* to *3*,
   / Async functional programming: in *Scala* with *Cats Effect* or *ZIO*.
   / Agile: using *XP* and *Scrum* and a *Kanban* advocate.
-  / Databases: with *Postgres* and *HikariCP*
+  / Databases: with *Postgres*, *Doobie*, and *HikariCP*
   / Infrastructure as code: using *Terraform*.
 
   References are to be given upon request
