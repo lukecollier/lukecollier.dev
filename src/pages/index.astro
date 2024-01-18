@@ -1,15 +1,80 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro"
+import MainLayout from "../layouts/MainLayout.astro";
+import "../crt.css";
+// cmds
+// whoami -> lukecollier.dev
+// ls -> nav bar (cv, experience, contact, etc)
+// cd <dir> -> open page? or start writing out text like a chatgpt
 ---
 
-<MainLayout title="Poorly Typed" description="Come with me fellow type astronaut, adventure awaits!" type="website">
-  <div class="container">
-    <div class="card-body bg-primary">
-      <h2 class="card-title">Luke Collier</h2>
-      <p>Senior Software Engineer</p>
-      <div class="card-actions justify-end">
-        <button class="btn btn-primary">Follow</button>
+<MainLayout
+  title="Poorly Typed"
+  description="Come with me fellow type astronaut, adventure awaits!"
+  type="website"
+>
+  <script type="application/javascript">
+
+    function successEl(input, outcome) {
+      let listItem = document.createElement("li")
+      listItem.className = "px-2 m-x-2 text-xl"
+      let inputEl = document.createElement("p")
+      let promptEl = document.createElement("span")
+      promptEl.className = "mr-2"
+      let outEl = document.createElement("p")
+      let promptText = document.createTextNode(">")
+      let inputText = document.createTextNode(input)
+      let outcomeText = document.createTextNode(outcome)
+      promptEl.appendChild(promptText)
+      inputEl.appendChild(promptEl)
+      inputEl.appendChild(inputText)
+      listItem.appendChild(inputEl)
+      outEl.appendChild(outcomeText)
+      listItem.appendChild(outEl)
+      return listItem
+    }
+
+    function onSubmit(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      console.log(event)
+      let successful = successEl(document.getElementById("prompt").value, "result will be here");
+      document.getElementById("history").appendChild(successful)
+      document.getElementById("prompt").value = "";
+    }
+
+    function focusPrompt() {
+      document.getElementById("prompt").focus();
+    }
+  </script>
+  <form id="console" onsubmit="onSubmit(event)" class="hero min-h-screen bg-base-200 crt" onclick="focusPrompt()">
+    <div class="hero-content flex-col lg:flex-col h-full">
+      <div class="">
+        <ul id="history">
+          <li class="px-2 mr-2 border-l-2 border-x-red-300 text-xl">
+            <p><span class="mr-2">></span>not success</p>
+          </li>
+          <li class="px-2 m-x-2 text-xl">
+            <p><span class="mr-2">></span>whoami</p>
+            <p>lukecollier.dev</p>
+          </li>
+        </ul>
+        <div>
+        <span class="text-xl mr-2 pl-2 m-x-2">></span><input
+          id="prompt"
+          type="text"
+          list="cmds"
+          autocomplete="off”
+          style="background: none;"
+          class="text-xl bg-transparent crt focus:outline-none"
+        />
+        </div>
+        <datalist id="cmds">
+          <option value="whoami" />
+          <option value="ls" />
+          <option value="open resume" />
+          <option value="open contact" />
+        </datalist>
       </div>
     </div>
-  </div>
+  </form>
 </MainLayout>
