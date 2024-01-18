@@ -34,16 +34,18 @@ import "../crt.css";
       let inputEl = document.createElement("p")
       let promptEl = document.createElement("span")
       promptEl.className = "mr-2"
-      let outEl = document.createElement("p")
       let promptText = document.createTextNode(">")
       let inputText = document.createTextNode(input)
-      let outcomeText = document.createTextNode(outcome)
       promptEl.appendChild(promptText)
       inputEl.appendChild(promptEl)
       inputEl.appendChild(inputText)
       listItem.appendChild(inputEl)
-      outEl.appendChild(outcomeText)
-      listItem.appendChild(outEl)
+      for (out of outcome) {
+        let outEl = document.createElement("p")
+        let outcomeText = document.createTextNode(out)
+        outEl.appendChild(outcomeText)
+        listItem.appendChild(outEl)
+      }
       return listItem
     }
 
@@ -57,7 +59,7 @@ import "../crt.css";
         case "opencontact":
           window.location.pathname = "/contact"
           break;
-        case "openresume":
+        case "openresume.pdf":
           window.location.pathname = "/resume.pdf"
           break;
         case "opencv":
@@ -68,6 +70,10 @@ import "../crt.css";
           break;
         case "whoami":
           output.push("lukecollier")
+          break;
+        case "help":
+          output.push("use commands to navigate the website,")
+          output.push("for example open resume.pdf")
           break;
       }
       if (output.length !== 0) {
