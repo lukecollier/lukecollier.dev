@@ -13,6 +13,20 @@ import "../crt.css";
   type="website"
 >
   <script type="application/javascript">
+    function failEl(input) {
+      let listItem = document.createElement("li")
+      listItem.className = "px-2 mr-2 border-l-2 border-x-red-300 text-xl"
+      let inputEl = document.createElement("p")
+      let promptEl = document.createElement("span")
+      promptEl.className = "mr-2"
+      let promptText = document.createTextNode(">")
+      let inputText = document.createTextNode(input)
+      promptEl.appendChild(promptText)
+      inputEl.appendChild(promptEl)
+      inputEl.appendChild(inputText)
+      listItem.appendChild(inputEl)
+      return listItem
+    }
 
     function successEl(input, outcome) {
       let listItem = document.createElement("li")
@@ -36,9 +50,33 @@ import "../crt.css";
     function onSubmit(event) {
       event.preventDefault();
       event.stopPropagation();
-      console.log(event)
-      let successful = successEl(document.getElementById("prompt").value, "result will be here");
-      document.getElementById("history").appendChild(successful)
+      let splitValue = document.getElementById("prompt").value.split(/\s/)
+      var output = []
+      console.log(splitValue.join())
+      switch(splitValue.join("")) {
+        case "opencontact":
+          window.location.pathname = "/contact"
+          break;
+        case "openresume":
+          window.location.pathname = "/resume.pdf"
+          break;
+        case "opencv":
+          window.location.pathname = "/resume.pdf"
+          break;
+        case "ls":
+          output.push("resume.pdf contact")
+          break;
+        case "whoami":
+          output.push("lukecollier")
+          break;
+      }
+      if (output.length !== 0) {
+        let successful = successEl(document.getElementById("prompt").value, output);
+        document.getElementById("history").appendChild(successful)
+      } else {
+        let failure = failEl(document.getElementById("prompt").value, output);
+        document.getElementById("history").appendChild(failure)
+      }
       document.getElementById("prompt").value = "";
     }
 
@@ -50,13 +88,6 @@ import "../crt.css";
     <div class="hero-content flex-col lg:flex-col h-full">
       <div class="">
         <ul id="history">
-          <li class="px-2 mr-2 border-l-2 border-x-red-300 text-xl">
-            <p><span class="mr-2">></span>not success</p>
-          </li>
-          <li class="px-2 m-x-2 text-xl">
-            <p><span class="mr-2">></span>whoami</p>
-            <p>lukecollier.dev</p>
-          </li>
         </ul>
         <div>
         <span class="text-xl mr-2 pl-2 m-x-2">></span><input
