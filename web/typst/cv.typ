@@ -17,7 +17,7 @@ margin: (x: 0pt, y: 0pt),
       ])
     ]
 )
-#link("https://www.lukecollier.dev")[https://lukecollier.dev]
+#link("https://www.poorlytyped.dev")[https://poorlytped.dev]
 |
 #link("mailto:me@lukecollier.dev")[me\@lukecollier.dev]
 |
@@ -34,37 +34,39 @@ margin: (x: 0pt, y: 0pt),
     columns: (auto, auto),
     align: top,
     stroke: none,
-    [2023 - 2024], [
+    [2023 - 2025], [
       #text(weight:"bold")[LiveRamp] #h(1fr) Senior Software Engineer
 
-      Worked on identity resolution using spark. Here I refined my knowledge of data engineering providing support into data persistence, efficient retrieval, and transformation. While working at LiveRamp I was able to improve build times, reduce developer friction and migrate to a new MySql database from a file based solution. I was able to achieve this with zero down time.
+      Worked on identity resolution using spark. Here I refined my knowledge of large engineering providing support into data persistence, efficient retrieval, and ETL. On top of I was able to improve build times, reduce developer friction and migrate to a new MySql database from a file based solution. This migration was achieved with zero down time using strategies that allowed a seamless transition for the end user. I also developed a graph visualisation tool for our team to understand the data and visualise issues quickly and effectively.
     ],
     [2022 - 2023], [
       #text(weight:"bold")[Skedulo] #h(1fr) Senior Software Engineer
 
-      Picking up where my dissertation left off working with NP-hard problems and providing integrations that created schedules for hundreds of people. I implemented the team's ways of working, improving time to delivery but also lead tracking it and experimenting with our team metrics. Performed large architectural migrations to reduce our update all dependencies. Identified high resource usage leading to a 100% improvement on our runtime characteristics.
+      Picking up where my dissertation left off working on NP-hard problems and providing integrations that created schedules for hundreds of people. I implemented the team's ways of working, improving time to delivery but also lead tracking and experimenting with our team metrics. Performed large architectural migrations to ensure we were benefiting from the latest tech. Identified high resource usage leading to a 100% improvement on our runtime.
     ],
-    [2021 - Aug], [
+    [2021 - 2022], [
       #text(weight:"bold")[OrgVue] #h(1fr) Senior Software Engineer
 
-      By working with the operations team implemented strategies that allowed developers to self-serve their infrastructure requirements reducing blocked work streams. Fully automating the release pipelines leading to a much improved time to delivery.
+      By working with the operations team implemented strategies that allowed developers to self-serve their infrastructure requirements reducing blocked work streams. Fully automating the release pipelines leading to a much improved time to delivery, while also minimising the build times by around 50% on average leveraging build caches and incremental compilation.
     ],
     [2019 - 2021], [
       #text(weight:"bold")[Disney Streaming Services] #h(1fr) Software Engineer
 
-      Built an A/B testing platform with extreme requirements around performance. Focussing on these requirements, identifying, and removing blocking operations, leading to improving our throughput by 20%. Mentored and up-skill 2 other team members in Scala and functional programming in under two weeks. Created and deployed internal documentation reducing integration questions by around 2 a week. Also lead the charge in using code generation to manage our graphql endpoints cleanly and avoid boilerplate.
+      Built an A/B testing platform with extreme requirements around performance. Focussing on these requirements, identifying, and removing blocking operations, leading to improving our throughput by 20%. Mentored and up-skill 2 other team members in a new language and programming paradigm. Created and deployed internal documentation reducing integration questions by around 2 a week. Also lead the team in using code generation to manage our graphql endpoints cleanly and avoiding boilerplate.
     ],
     [2017 - 2019], [
       #text(weight:"bold")[Booking.com] #h(1fr) Software Engineer
 
-      Implemented A/B tested features with over one hundred concurrent experiments run daily and thousands of users per minute. This gave me the confidence to make changes, monitor releases and respond to outages. Released, monitored, and fixed features and had one of the highest monthly contributions in the organization across a 500+ engineering team. While working on the pricing engine I was instrumental in moving from manual pricing towards a machine learning algorithm coordinating across the infrastruture, data, and engineering teams.
+      Implemented A/B tested features with over one hundred concurrent experiments ran daily and thousands of users per minute. This gave me the confidence to make changes, monitor releases and respond to outages. Released, monitored, and fixed features and had one of the highest monthly contributions in the organization across a 500+ engineering team. While working on the pricing engine I was instrumental in moving from manual pricing towards a machine learning algorithm coordinating across the infrastructure, data, and engineering teams.
     ],
     [2014 - 2017], [
       #text(weight:"bold")[BSC First with Honours in Computer Science] #h(1fr) Bangor University
 
-      My dissertation was on Genetic Algorithms with research into various heuristic and meta heuristic algorithms. Created a project that would take a data set and provide an optimized timetable based on a fitness function.
+      My dissertation was on Genetic Algorithms with research into various heuristic algorithms. Created a project that would take a data set and provide an optimized timetable based on a fitness function. To achieve this I read white papers and took inspirations from multiple approaches, for example using some principles from simulated annealing to reduce variations in the final populations.
     ]
     )
+
+#colbreak()
 
   == Traits
 
@@ -72,13 +74,13 @@ margin: (x: 0pt, y: 0pt),
   - *Mentoring -* I've up-skilled several team members and taught useful paradigms and patterns for creating re-usable, maintainable code.
   - *Working in a Team -* Thrive in a collaborative team environment, often discussing and pairing allowing faster design and feedback loops.
   - *Continuous Releases -* While working at Disney & OrgVue shaped the infrastructure pipeline for minimizing time to release. I strongly believe the ability to move quickly is the key to robust software.
-  - *Polyglot -* From working with Java at Booking, to leveraging Scala at Disney and OrgVue, I'm able to write idiomatic code in multiple languages and learn patterns quickly. I've also spent time with Go, Rust, and JavaScript.
+  - *Polyglot -* From working with Java at Booking, to leveraging Scala at Disney and OrgVue, I'm able to write idiomatic code in multiple languages and learn patterns quickly. I've also spent time with Go, Rust, Python, and JavaScript.
 
   == Personal
 
-  - *Climbing -* I'm active in the Manchester climbing community, I enjoy the slow methodical planning it takes to action complex sequences to get to complete a route.
-  - *Van Conversion -* I've converting a van into a full livable home, doing the entire process from inception to actually building and installing all the services you might not expect in a metal box.
-  - *Coding -* Even outside of work I spend time building passion projects, I've worked on code transpilation, written an interpreter, and even build a game. I'm always looking for new challenges to keep my skills sharp.
+  - *Climbing -* I'm active in the climbing community, I enjoy the slow methodical planning it takes to execute complex sequences to complete a route.
+  - *Van Conversion -* I've converted a Crafter into a full livable home, doing the entire process from inception to actually building and installing all the services you might not expect in a metal box.
+  - *Coding -* Even outside of work I spend time building passion projects, I've worked on code transpilation, written an interpreter, and even built several game's. I'm always looking for new challenges to keep my skills sharp.
 
   == Technologies
 

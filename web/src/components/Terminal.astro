@@ -1,0 +1,156 @@
+---
+
+export type Props = {
+  title: string;
+}
+
+const { disabled } = Astro.props;
+
+---
+<script type="application/javascript">
+  function failEl(input) {
+    let listItem = document.createElement("li");
+    listItem.className = "px-2 mr-2 border-l-2 border-x-red-300 text-xl";
+    let inputEl = document.createElement("p");
+    let promptEl = document.createElement("span");
+    promptEl.className = "mr-2";
+    let promptText = document.createTextNode(">");
+    let inputText = document.createTextNode(input);
+    promptEl.appendChild(promptText);
+    inputEl.appendChild(promptEl);
+    inputEl.appendChild(inputText);
+    listItem.appendChild(inputEl);
+    return listItem;
+  }
+
+  function successEl(input, outcome) {
+    let listItem = document.createElement("li");
+    listItem.className = "px-2 m-x-2 text-xl";
+    let inputEl = document.createElement("p");
+    let promptEl = document.createElement("span");
+    promptEl.className = "mr-2";
+    let promptText = document.createTextNode(">");
+    let inputText = document.createTextNode(input);
+    promptEl.appendChild(promptText);
+    inputEl.appendChild(promptEl);
+    inputEl.appendChild(inputText);
+    listItem.appendChild(inputEl);
+    for (out of outcome) {
+      let outEl = document.createElement("p");
+      let outcomeText = document.createTextNode(out);
+      outEl.appendChild(outcomeText);
+      listItem.appendChild(outEl);
+    }
+    return listItem;
+  }
+
+  function onSubmit(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    let splitValue = document.getElementById("prompt").value.split(/\s/);
+    var output = [];
+    var success = true;
+    console.log(splitValue.join());
+    switch (splitValue.join("")) {
+      case "opencontact":
+        // window.location.pathname = "/contact";
+        break;
+      case "open/blog":
+        window.location.pathname = "/blog";
+        break;
+      case "open/contact":
+        // window.location.pathname = "/contact";
+        break;
+      case "openresume.pdf":
+        window.open("/resume.pdf", "_blank");
+        break;
+      case "opencv":
+        window.open("/resume.pdf", "_blank");
+        break;
+      case "opengithub":
+        window.open("https://www.github.com/lukecollier", "_blank");
+        break;
+      case "ls":
+        output.push("resume.pdf contact/");
+        break;
+      case "whoami":
+        output.push("lukecollier");
+        break;
+      case "help":
+        output.push("use commands to navigate the website,");
+        output.push("available commands:");
+        output.push("open <filename> -- open a file");
+        output.push("ls -- see files");
+        break;
+      case "about":
+        output.push("Hello world, I'm Luke Collier a Software Engineer from the United Kingdom currently living in Sydney. To explore the website you can start by typing 'help'.");
+        break;
+      default:
+        success = false;
+        break;
+    }
+    let historyElement = document.getElementById("history");
+    const lastChild = historyElement.lastElementChild;
+    if (lastChild && historyElement.childElementCount > 10) {
+      historyElement.removeChild(lastChild);
+    }
+    if (success === true) {
+      let successful = successEl(
+        document.getElementById("prompt").value,
+        output
+      );
+      let history_element = document.getElementById("history");
+      historyElement.insertBefore(successful, historyElement.firstChild);
+    } else {
+      let failure = failEl(document.getElementById("prompt").value, output);
+      let history_element = document.getElementById("history");
+      historyElement.insertBefore(failure, historyElement.firstChild);
+    }
+    document.getElementById("prompt").value = "";
+  }
+
+  window.onload = function() {
+    onSubmit(new Event("submit", { bubbles: false }));
+  };
+
+  function focusPrompt() {
+    document.getElementById("prompt").focus();
+  }
+</script>
+<div class="hero min-h-screen bg-base-200 crt p-0">
+  <div class="hero-content h-screen max-h-screen w-full p-0">
+    <form
+      id="console"
+      onsubmit="onSubmit(event)"
+      onclick="focusPrompt()"
+      autocomplete="off"
+      class="hero-content h-full w-full p-0 max-h-full"
+      >
+      <div class="flex-col overflow-hidden h-full w-1/2 max-h-full">
+        <ul id="history", class="max-h-1/2 h-1/2 overflow-hidden flex flex-col-reverse"></ul>
+        <div>
+          <span class="text-xl mr-2 pl-2">&gt;</span><input
+          id="prompt"
+          type="text"
+          list="cmds"
+          autocomplete="off"
+          style="background: none;"
+          class="text-xl bg-transparent crt focus:outline-none"
+          value="about"
+          />
+        </div>
+        <datalist id="cmds">
+          <option value="whoami"></option>
+          <option value="about"></option>
+          <option value="help"></option>
+          <option value="ls"></option>
+          <option value="open resume.pdf"></option>
+          <option value="open /contact"></option>
+          <option value="open /blog"></option>
+          <option value="open github"></option>
+          <option value="open instagram"></option>
+        </datalist>
+      </div>
+    </form>
+  </div>
+</div>
